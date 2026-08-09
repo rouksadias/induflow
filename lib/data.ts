@@ -88,6 +88,7 @@ export interface Product {
   ref: string;
   categorySlug: string;
   description: string;
+  image?: string;
 }
 
 export const products: Product[] = [
@@ -185,6 +186,7 @@ export const products: Product[] = [
     ref: "IF-PBL-TS01",
     categorySlug: "poubelles-conteneurs",
     description: "Collecte sélective multi-flux pour sites industriels et espaces communs.",
+    image: "/products/poubelle-tri-selectif.jpg",
   },
   {
     slug: "poubelle-industrielle-exterieure",
@@ -192,6 +194,7 @@ export const products: Product[] = [
     ref: "IF-PBL-EX01",
     categorySlug: "poubelles-conteneurs",
     description: "Résistante aux intempéries, adaptée aux chantiers et zones de stockage.",
+    image: "/products/poubelle-industrielle-exterieure.jpg",
   },
   {
     slug: "conteneur-dechets-industriels",

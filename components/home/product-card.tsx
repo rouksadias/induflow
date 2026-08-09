@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { PackageSearch } from "lucide-react";
 import type { Product } from "@/lib/data";
@@ -9,9 +10,21 @@ interface ProductCardProps {
 export function ProductCard({ product }: ProductCardProps) {
   return (
     <div className="flex flex-col rounded-xl border border-slate-200 bg-white shadow-sm transition hover:shadow-md">
-      <div className="flex h-40 items-center justify-center rounded-t-xl bg-light">
-        <PackageSearch className="h-12 w-12 text-industrial/40" aria-hidden="true" />
-        <span className="sr-only">Photo à venir : {product.name}</span>
+      <div className="relative flex h-40 items-center justify-center overflow-hidden rounded-t-xl bg-light">
+        {product.image ? (
+          <Image
+            src={product.image}
+            alt={product.name}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 25vw"
+          />
+        ) : (
+          <>
+            <PackageSearch className="h-12 w-12 text-industrial/40" aria-hidden="true" />
+            <span className="sr-only">Photo à venir : {product.name}</span>
+          </>
+        )}
       </div>
 
       <div className="flex flex-1 flex-col p-5">
