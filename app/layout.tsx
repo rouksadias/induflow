@@ -27,6 +27,19 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description,
+  keywords: siteConfig.keywords,
+  alternates: {
+    canonical: siteConfig.url,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+    },
+  },
   openGraph: {
     title,
     description,
@@ -35,17 +48,35 @@ export const metadata: Metadata = {
     locale: "fr_MA",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
+  other: {
+    "geo.region": "MA-CAS",
+    "geo.placename": siteConfig.city,
+  },
 };
 
 const organizationJsonLd = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": "LocalBusiness",
   name: siteConfig.name,
   url: siteConfig.url,
   description: siteConfig.tagline,
   email: siteConfig.email,
+  telephone: siteConfig.phone,
+  areaServed: {
+    "@type": "Country",
+    name: "Maroc",
+  },
   address: {
     "@type": "PostalAddress",
+    streetAddress: siteConfig.streetAddress,
+    addressLocality: siteConfig.city,
+    postalCode: siteConfig.postalCode,
+    addressRegion: siteConfig.region,
     addressCountry: "MA",
   },
 };

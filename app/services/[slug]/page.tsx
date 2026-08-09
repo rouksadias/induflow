@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { services, getServiceBySlug } from "@/lib/data";
+import { siteConfig } from "@/lib/config";
 
 export function generateStaticParams() {
   return services.map((service) => ({ slug: service.slug }));
@@ -19,9 +20,21 @@ export async function generateMetadata({
     return {};
   }
 
+  const title = `${service.name} au Maroc`;
+  const description = `${service.description} Service proposé aux entreprises industrielles au Maroc, devis sous 24h.`;
+  const url = `${siteConfig.url}/services/${service.slug}`;
+
   return {
-    title: service.name,
-    description: service.description,
+    title,
+    description,
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      title,
+      description,
+      url,
+    },
   };
 }
 

@@ -9,7 +9,21 @@ export const siteConfig = {
   whatsappNumber: "+212 6 XX XX XX XX",
   whatsappHref: "https://wa.me/2126XXXXXXXX",
   address: "Maroc",
+  streetAddress: "Quartier Industriel",
+  city: "Casablanca",
+  postalCode: "20000",
+  region: "Casablanca-Settat",
   url: "https://www.induflow.ma",
+  keywords: [
+    "équipements industriels Maroc",
+    "détecteur de gaz Maroc",
+    "étalonnage détecteur de gaz Casablanca",
+    "fournisseur industriel Casablanca",
+    "pompes industrielles Maroc",
+    "vannes industrielles Maroc",
+    "EPI sécurité industrielle Maroc",
+    "fourniture industrielle sur devis Maroc",
+  ],
 };
 
 export const stats = [

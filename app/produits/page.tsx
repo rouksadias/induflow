@@ -2,11 +2,16 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { categories } from "@/lib/data";
+import { siteConfig } from "@/lib/config";
 
 export const metadata: Metadata = {
-  title: "Produits",
+  title: "Produits industriels au Maroc",
   description:
     "Découvrez le catalogue INDUFLOW : détection des gaz, étalonnage, pompes, vannes, conteneurs et EPI pour les professionnels au Maroc.",
+  keywords: siteConfig.keywords,
+  alternates: {
+    canonical: `${siteConfig.url}/produits`,
+  },
 };
 
 export default function ProduitsPage() {

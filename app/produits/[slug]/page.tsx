@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { PackageSearch } from "lucide-react";
 import { categories, getCategoryBySlug, getProductsByCategory } from "@/lib/data";
+import { siteConfig } from "@/lib/config";
 
 export function generateStaticParams() {
   return categories.map((category) => ({ slug: category.slug }));
@@ -20,9 +21,20 @@ export async function generateMetadata({
     return {};
   }
 
+  const title = `${category.name} au Maroc | Sur devis`;
+  const description = `${category.description} Livraison partout au Maroc, devis sous 24h.`;
+
   return {
-    title: category.name,
-    description: category.description,
+    title,
+    description,
+    alternates: {
+      canonical: `${siteConfig.url}${category.href}`,
+    },
+    openGraph: {
+      title,
+      description,
+      url: `${siteConfig.url}${category.href}`,
+    },
   };
 }
 
