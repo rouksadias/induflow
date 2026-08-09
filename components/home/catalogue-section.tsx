@@ -5,6 +5,7 @@ const featuredCategories = [
   { slug: "detection-des-gaz", title: "Détection des gaz" },
   { slug: "pompes-industrielles", title: "Pompes industrielles" },
   { slug: "vannes-industrielles", title: "Vannes industrielles" },
+  { slug: "poubelles-conteneurs", title: "Poubelles & conteneurs" },
   { slug: "epi-securite", title: "EPI et sécurité" },
 ];
 

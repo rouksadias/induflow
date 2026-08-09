@@ -178,6 +178,42 @@ export const products: Product[] = [
     categorySlug: "vannes-industrielles",
     description: "Protection des installations contre les retours de fluide.",
   },
+  // Poubelles & conteneurs
+  {
+    slug: "poubelle-tri-selectif",
+    name: "Poubelle de tri sélectif",
+    ref: "IF-PBL-TS01",
+    categorySlug: "poubelles-conteneurs",
+    description: "Collecte sélective multi-flux pour sites industriels et espaces communs.",
+  },
+  {
+    slug: "poubelle-industrielle-exterieure",
+    name: "Poubelle industrielle extérieure",
+    ref: "IF-PBL-EX01",
+    categorySlug: "poubelles-conteneurs",
+    description: "Résistante aux intempéries, adaptée aux chantiers et zones de stockage.",
+  },
+  {
+    slug: "conteneur-dechets-industriels",
+    name: "Conteneur à déchets industriels",
+    ref: "IF-PBL-CD01",
+    categorySlug: "poubelles-conteneurs",
+    description: "Grande capacité pour la collecte de déchets sur sites de production.",
+  },
+  {
+    slug: "bac-recyclage",
+    name: "Bac de collecte recyclage",
+    ref: "IF-PBL-RC01",
+    categorySlug: "poubelles-conteneurs",
+    description: "Solution de recyclage pour bureaux, ateliers et zones de maintenance.",
+  },
+  {
+    slug: "poubelle-a-pedale",
+    name: "Poubelle à pédale",
+    ref: "IF-PBL-PD01",
+    categorySlug: "poubelles-conteneurs",
+    description: "Usage hygiénique sans contact pour zones de production et sanitaires.",
+  },
   // EPI et sécurité
   {
     slug: "chaussures-de-securite",
