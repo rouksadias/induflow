@@ -13,8 +13,15 @@ import { submitQuoteRequest } from "@/lib/api";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
-export function QuoteForm() {
-  const [values, setValues] = useState<QuoteFormValues>(emptyQuoteForm);
+interface QuoteFormProps {
+  defaultValues?: Partial<QuoteFormValues>;
+}
+
+export function QuoteForm({ defaultValues }: QuoteFormProps = {}) {
+  const [values, setValues] = useState<QuoteFormValues>({
+    ...emptyQuoteForm,
+    ...defaultValues,
+  });
   const [errors, setErrors] = useState<QuoteFormErrors>({});
   const [attachment, setAttachment] = useState<File | null>(null);
   const [status, setStatus] = useState<Status>("idle");

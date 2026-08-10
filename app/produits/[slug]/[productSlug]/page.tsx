@@ -87,7 +87,7 @@ export default async function ProductPage({
             </p>
 
             <Link
-              href={`/#quote-form?product=${encodeURIComponent(product.name)}`}
+              href={`/devis/${category.slug}/${product.slug}`}
               className="mt-8 inline-flex rounded-md bg-technical px-6 py-3 text-sm font-semibold text-white hover:bg-industrial"
             >
               Demander un devis

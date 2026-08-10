@@ -46,7 +46,7 @@ export function ProductCard({ product }: ProductCardProps) {
             Voir le produit
           </Link>
           <Link
-            href={`/#quote-form?product=${encodeURIComponent(product.name)}`}
+            href={`/devis/${product.categorySlug}/${product.slug}`}
             className="rounded-md bg-technical px-3 py-2 text-center text-xs font-semibold text-white hover:bg-industrial"
           >
             Demander un devis
