@@ -18,6 +18,7 @@ export function ProductCard({ product }: ProductCardProps) {
             fill
             className="object-cover"
             sizes="(max-width: 768px) 100vw, 25vw"
+            loading="lazy"
           />
         ) : (
           <>

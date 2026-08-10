@@ -38,7 +38,7 @@ export function ProductCarousel({ images, alt }: ProductCarouselProps) {
           fill
           className="object-cover"
           sizes="(max-width: 1024px) 100vw, 50vw"
-          priority
+          loading="lazy"
         />
 
         {images.length > 1 && (
@@ -76,7 +76,14 @@ export function ProductCarousel({ images, alt }: ProductCarouselProps) {
                 imageIndex === index ? "border-technical" : "border-transparent"
               }`}
             >
-              <Image src={image} alt="" fill className="object-cover" sizes="64px" />
+              <Image
+                src={image}
+                alt={`${alt} — miniature ${imageIndex + 1}`}
+                fill
+                className="object-cover"
+                sizes="64px"
+                loading="lazy"
+              />
             </button>
           ))}
         </div>
