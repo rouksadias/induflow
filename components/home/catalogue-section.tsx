@@ -6,6 +6,7 @@ const featuredCategories = [
   { slug: "pompes-industrielles", title: "Pompes industrielles" },
   { slug: "vannes-industrielles", title: "Vannes industrielles" },
   { slug: "poubelles-conteneurs", title: "Poubelles & conteneurs" },
+  { slug: "consignation-loto", title: "Consignation (LOTO)" },
   { slug: "epi-securite", title: "EPI et sécurité" },
 ];
 

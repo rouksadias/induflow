@@ -5,6 +5,7 @@ import {
   GitCommit,
   Trash2,
   HardHat,
+  Lock,
   Activity,
   Compass,
   FileText,
@@ -79,6 +80,15 @@ export const categories: Category[] = [
       "Des équipements de protection individuelle pour sécuriser vos équipes sur le terrain : chaussures, gants, casques et harnais.",
     icon: HardHat,
     href: "/produits/epi-securite",
+  },
+  {
+    slug: "consignation-loto",
+    name: "Consignation (LOTO)",
+    shortDescription: "Kits, cadenas et étiquettes de consignation multi-énergies.",
+    description:
+      "Des kits de consignation LOTO (Lockout-Tagout) pour sécuriser vos interventions de maintenance : cadenas, étiquettes et boîtiers multi-énergies.",
+    icon: Lock,
+    href: "/produits/consignation-loto",
   },
 ];
 
@@ -247,6 +257,35 @@ export const products: Product[] = [
     ref: "IF-EPI-HA01",
     categorySlug: "epi-securite",
     description: "Sécurisation des interventions en hauteur.",
+  },
+  // Consignation (LOTO)
+  {
+    slug: "kit-consignation-electrique",
+    name: "Kit de consignation électrique",
+    ref: "IF-CSG-EL01",
+    categorySlug: "consignation-loto",
+    description: "Ensemble complet pour la consignation sécurisée des installations électriques.",
+  },
+  {
+    slug: "cadenas-consignation",
+    name: "Cadenas de consignation",
+    ref: "IF-CSG-CD01",
+    categorySlug: "consignation-loto",
+    description: "Cadenas individuels à clés uniques pour verrouiller les points d'énergie.",
+  },
+  {
+    slug: "etiquettes-consignation",
+    name: "Étiquettes de consignation",
+    ref: "IF-CSG-ET01",
+    categorySlug: "consignation-loto",
+    description: "Étiquettes d'avertissement pour signaler une intervention en cours.",
+  },
+  {
+    slug: "boitier-consignation-multi-energies",
+    name: "Boîtier de consignation multi-énergies",
+    ref: "IF-CSG-BM01",
+    categorySlug: "consignation-loto",
+    description: "Regroupe plusieurs cadenas pour consigner des installations multi-énergies.",
   },
 ];
 
