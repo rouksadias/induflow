@@ -5,9 +5,10 @@ import type { Product } from "@/lib/data";
 
 interface ProductTileGridProps {
   products: Product[];
+  categorySlug: string;
 }
 
-export function ProductTileGrid({ products }: ProductTileGridProps) {
+export function ProductTileGrid({ products, categorySlug }: ProductTileGridProps) {
   if (products.length === 0) {
     return (
       <section className="mx-auto max-w-7xl px-6 py-16">
@@ -24,8 +25,7 @@ export function ProductTileGrid({ products }: ProductTileGridProps) {
         {products.map((product) => (
           <Link
             key={product.slug}
-            id={product.slug}
-            href={`/#quote-form?product=${encodeURIComponent(product.name)}`}
+            href={`/produits/${categorySlug}/${product.slug}`}
             className="group relative flex h-72 flex-col overflow-hidden rounded-xl bg-industrial shadow-sm"
           >
             {product.image ? (

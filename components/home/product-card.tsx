@@ -39,7 +39,7 @@ export function ProductCard({ product }: ProductCardProps) {
 
         <div className="mt-4 flex flex-col gap-2">
           <Link
-            href={`/produits/${product.categorySlug}#${product.slug}`}
+            href={`/produits/${product.categorySlug}/${product.slug}`}
             className="rounded-md border border-slate-200 px-3 py-2 text-center text-xs font-semibold text-industrial hover:border-technical hover:text-technical"
           >
             Voir le produit

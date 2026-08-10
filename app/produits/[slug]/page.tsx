@@ -58,7 +58,7 @@ export default async function CategoryPage({
     <>
       <CategoryHero name={category.name} description={category.description} icon={category.icon} />
       <BrandsStrip />
-      <ProductTileGrid products={categoryProducts} />
+      <ProductTileGrid products={categoryProducts} categorySlug={category.slug} />
       <CategoryHelpSection />
     </>
   );

@@ -88,7 +88,9 @@ export interface Product {
   ref: string;
   categorySlug: string;
   description: string;
+  longDescription?: string;
   image?: string;
+  images?: string[];
 }
 
 export const products: Product[] = [
@@ -354,6 +356,12 @@ export function getCategoryBySlug(slug: string): Category | undefined {
 
 export function getProductsByCategory(categorySlug: string): Product[] {
   return products.filter((product) => product.categorySlug === categorySlug);
+}
+
+export function getProductBySlug(categorySlug: string, slug: string): Product | undefined {
+  return products.find(
+    (product) => product.categorySlug === categorySlug && product.slug === slug
+  );
 }
 
 export function getServiceBySlug(slug: string): ServiceItem | undefined {
