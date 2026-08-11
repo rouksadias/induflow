@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { LucideIcon } from "lucide-react";
 
@@ -5,12 +6,26 @@ interface CategoryHeroProps {
   name: string;
   description: string;
   icon: LucideIcon;
+  image?: string;
 }
 
-export function CategoryHero({ name, description, icon: Icon }: CategoryHeroProps) {
+export function CategoryHero({ name, description, icon: Icon, image }: CategoryHeroProps) {
   return (
-    <section className="bg-gradient-to-br from-industrial via-deep to-deep text-white">
-      <div className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
+    <section className="relative overflow-hidden bg-gradient-to-br from-industrial via-deep to-deep text-white">
+      {image && (
+        <>
+          <Image
+            src={image}
+            alt={name}
+            fill
+            className="object-cover"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-industrial/90 via-deep/85 to-deep/90" />
+        </>
+      )}
+
+      <div className="relative mx-auto max-w-7xl px-6 py-16 lg:py-20">
         <nav aria-label="Fil d'ariane" className="mb-6 text-xs text-slate-300">
           <Link href="/produits" className="hover:text-white">
             Produits

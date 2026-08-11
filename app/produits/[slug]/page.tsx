@@ -56,7 +56,12 @@ export default async function CategoryPage({
 
   return (
     <>
-      <CategoryHero name={category.name} description={category.description} icon={category.icon} />
+      <CategoryHero
+        name={category.name}
+        description={category.description}
+        icon={category.icon}
+        image={category.image}
+      />
       <BrandsStrip />
       <ProductTileGrid products={categoryProducts} categorySlug={category.slug} />
       <CategoryHelpSection />
