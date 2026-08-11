@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { categories } from "@/lib/data";
 
@@ -14,7 +15,20 @@ export function QuickCategories() {
               className="group flex flex-col items-center gap-3 rounded-xl border border-slate-200 bg-white p-5 text-center transition hover:-translate-y-1 hover:border-technical hover:shadow-md"
             >
               <span className="flex h-12 w-12 items-center justify-center rounded-full bg-light text-industrial group-hover:bg-technical group-hover:text-white">
-                <Icon className="h-6 w-6" aria-hidden="true" />
+                {category.image ? (
+                  <span className="relative block h-12 w-12 overflow-hidden rounded-full">
+                    <Image
+                      src={category.image}
+                      alt={category.name}
+                      fill
+                      className="object-cover"
+                      sizes="48px"
+                      loading="lazy"
+                    />
+                  </span>
+                ) : (
+                  <Icon className="h-6 w-6" aria-hidden="true" />
+                )}
               </span>
               <span className="text-sm font-semibold text-textGray">{category.name}</span>
             </Link>

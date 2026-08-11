@@ -24,6 +24,7 @@ export interface Category {
   description: string;
   icon: LucideIcon;
   href: string;
+  image?: string;
 }
 
 export const categories: Category[] = [
@@ -71,6 +72,7 @@ export const categories: Category[] = [
       "Des poubelles et conteneurs adaptés aux besoins de collecte des sites industriels, chantiers et zones de maintenance.",
     icon: Trash2,
     href: "/produits/poubelles-conteneurs",
+    image: "/categories/poubelles-conteneurs.webp",
   },
   {
     slug: "epi-securite",

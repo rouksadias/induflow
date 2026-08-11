@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { categories } from "@/lib/data";
@@ -25,7 +26,20 @@ export function CategoryGrid() {
                 className="flex flex-col rounded-xl border border-slate-200 bg-white p-6 shadow-sm"
               >
                 <span className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-light text-industrial">
-                  <Icon className="h-6 w-6" aria-hidden="true" />
+                  {category.image ? (
+                    <span className="relative block h-12 w-12 overflow-hidden rounded-full">
+                      <Image
+                        src={category.image}
+                        alt={category.name}
+                        fill
+                        className="object-cover"
+                        sizes="48px"
+                        loading="lazy"
+                      />
+                    </span>
+                  ) : (
+                    <Icon className="h-6 w-6" aria-hidden="true" />
+                  )}
                 </span>
                 <h3 className="text-lg font-semibold text-industrial">{category.name}</h3>
                 <p className="mt-2 flex-1 text-sm text-textGray">{category.description}</p>
