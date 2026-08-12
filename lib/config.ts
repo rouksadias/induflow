@@ -15,7 +15,7 @@ export const siteConfig = {
   region: "Casablanca-Settat",
   identifiantFiscal: "66288720",
   ice: "003723126000093",
-  url: "https://www.induflow.ma",
+  url: "https://induflow.site",
   keywords: [
     "équipements industriels Maroc",
     "détecteur de gaz Maroc",
